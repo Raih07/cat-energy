@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pink фотоальбом</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+    <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <link rel="preload" href="img/bg-back-desktop@2x.jpg" as="image">
+    <link rel="preload" href="img/bg-back-desktop@1x.jpg" as="image">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
+  </head>
+  <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="main-header main-header--close main-header--nojs">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="index.html">
+          <svg class="main-header__logo-img" width="147" height="40" version="1.1"  x="0px" y="0px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+            <use xlink:href="#sprite-header-logo"></use>
+          </svg>
+        </a>
+        <nav class="main-nav main-nav--close main-nav--nojs">
+          <button class="main-nav__toggle main-nav__toggle--open" type="button" aria-label="Открытие и закрытие меню">
+            <svg class="main-nav__icon main-nav__icon--open" version="1.0" x="0px" y="0px" width="50" height="24" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
+              <use xlink:href="#sprite-icon-menu-burger"></use>
+            </svg>
+            <svg class="main-nav__icon main-nav__icon--close" version="1.0" x="0px" y="0px" width="24" height="23" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+              <use xlink:href="#sprite-icon-menu-cross"></use>
+            </svg>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link">Фотографии</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="page-main">
+      <header class="main-section main-section--photo">
+        <div class="main-section__inner main-section__inner--submain">
+          <h1 class="main-section__title">Фотографии пользователей</h1>
+        </div>
+      </header>
+      <section class="gallery">
+        <h2 class="visually-hidden">Фотографии участников конкурса</h2>
+        <div class="gallery__description">
+          <p class="gallery__description-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
+        <figure class="gallery__card-main photo-card photo-card--main">
+          <a class="photo-card__picture photo-card__picture--main" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 940px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 620px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+              <source media="(min-width: 940px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 620px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="photo-card__img photo-card__img--main" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="фото Анны">
+            </picture>
+            <span class="photo-card__flag-photo-day">Панорама дня</span>
+          </a>
+          <div class="photo-card__main-photo-wrapper">
+            <div class="photo-card__body photo-card__body--main">
+              <div class="photo-card__header photo-card__header--main">
+                <span class="photo-card__author">Анна</span>
+                <span class="photo-card__time">(5 минут назад)</span>
+              </div>
+              <p class="photo-card__text photo-card__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <div class="photo-card__like photo-card__like--main">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item photo-card__count-item--main">
+                  Hравится: <span class="photo-card__like-count">215</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <div class="gallery__list">
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="фото Левона">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Левон</span>
+                <span class="photo-card__time">(5 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">356</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="фото Антона">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Антон</span>
+                <span class="photo-card__time">(12 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Соседи будут рады!</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">666</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="фото Бориса">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Борис</span>
+                <span class="photo-card__time">(20 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">215</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="фото Сергея">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Сергей</span>
+                <span class="photo-card__time">(25 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Самая кубанская в мире!</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">4</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="фото Максима">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Максим</span>
+                <span class="photo-card__time">(40 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Где снег-то?</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">150</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+          <figure class="gallery__item photo-card photo-card--submain">
+            <a class="photo-card__picture" href="#">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="photo-card__img photo-card__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="фото Надежды">
+              </picture>
+            </a>
+            <div class="photo-card__body">
+              <div class="photo-card__header">
+                <span class="photo-card__author">Надежда</span>
+                <span class="photo-card__time">(45 часов назад)</span>
+              </div>
+              <p class="photo-card__text">Всем GM и взаимные лайки!</p>
+              <div class="photo-card__like">
+                <button class="photo-card__like-btn" type="button" aria-label="мне нравится"></button>
+                <span class="photo-card__count-item">
+                    Hравится: <span class="photo-card__like-count">2560</span>
+                </span>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+      <section class="photo-upload">
+        <h2 class="visually-hidden">Редактирование и публикация фотографии</h2>
+        <div class="photo-upload__description">
+          <p class="photo-upload__description-text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="photo-editor photo-upload__editor">
+          <form class="photo-editor__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="photo-editor__picture">
+              <picture>
+                <source type="image/webp" media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 940px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 620px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img class="photo-editor__img" id="editor_img" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Обрабатываемое фото">
+              </picture>
+            </div>
+            <div class="photo-editor__body">
+              <div class="photo-editor__controls-list">
+                <!--**Кроп**-->
+                <div class="photo-editor__control photo-editor__control--crop">
+                  <button class="photo-editor__btn photo-editor__btn--active photo-editor__btn--crop" type="button" aria-label="Обрезка фотографии">
+                    <svg version="1.0" x="0px" y="0px" width="48" height="48" enable-background="new 0 0 48 48" xml:space="preserve">
+                      <use xlink:href="#sprite-icon-editor-crop"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__bar photo-editor__bar--crop photo-editor__bar--active" id="crop">
+                    <button class="photo-editor__thumb photo-editor__thumb--crop" id="thumb_btn_crop" type="button" aria-label="Ползунок кадрирования"></button>
+                  </div>
+                </div>
+                <!--**Насыщеноость**-->
+                <div class="photo-editor__control photo-editor__control--saturate photo-editor__control--active">
+                  <button class="photo-editor__btn photo-editor__btn--saturate" type="button" aria-label="Насыщенность фотографии">
+                    <svg version="1.0" x="0px" y="0px" width="48" height="48" enable-background="new 0 0 48 48" xml:space="preserve">
+                      <use xlink:href="#sprite-icon-editor-fill"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__bar photo-editor__bar--saturate" id="saturate">
+                    <button class="photo-editor__thumb photo-editor__thumb--saturate" id="thumb_btn_satur" type="button" aria-label="Ползунок насыщенности"></button>
+                  </div>
+                </div>
+                <!--**Яркость**-->
+                <div class="photo-editor__control photo-editor__control--bright">
+                  <button class="photo-editor__btn photo-editor__btn--bright" type="button" aria-label="Яркость фотографии">
+                    <svg version="1.0" x="0px" y="0px" width="31.92" height="31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                      <use xlink:href="#sprite-icon-editor-contrast"></use>
+                    </svg>
+                  </button>
+                  <div class="photo-editor__bar photo-editor__bar--bright" id="bright">
+                    <button class="photo-editor__thumb photo-editor__thumb--bright" id="thumb_btn_bright" type="button" aria-label="Ползунок яркости"></button>
+                  </div>
+                </div>
+              </div>
+              <!--Кнопки отправки формы-->
+              <div class="photo-editor__upl-btns">
+                <button class="photo-editor__upl-btn btn btn--round" id="btn_upl" type="submit" aria-label="Загрузить фотографию">Запостить</button>
+                <button class="photo-editor__cancel-btn btn btn--round" id="btn_cancel" type="button" aria-label="Сбросить фильтр">Отмена</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__logo">
+        <svg class="main-footer__logo-img" width="147" height="40" version="1.1"  x="0px" y="0px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
+          <use xlink:href="#sprite-footer-logo"></use>
+        </svg>
+      </div>
+      <div class="main-footer__social social">
+        <a href="https://twitter.com/htmlacademy_ru" class="social__btn social__btn--tw" aria-label="Мы в Твиттере"></a>
+        <a href="https://www.facebook.com/htmlacademy" class="social__btn social__btn--fb" aria-label="Мы в Фейсбуке"></a>
+        <a href="https://www.youtube.com/user/htmlacademyru" class="social__btn social__btn--youtube" aria-label="Мы в Ютьюбе"></a>
+      </div>
+      <div class="main-footer__copyright copyright">
+        <span class="copyright__text">Разработано</span>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link" aria-label="логотип HTML Academy">
+          <svg class="copyright__logo-img" version="1.0" x="0px" y="0px" width="26.943" height="34.09"  enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <use xlink:href="#sprite-logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
+    </footer>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
