@@ -97,6 +97,59 @@
         </div>
       </section>
 
+      <section class="reviews">
+        <div class="reviews__wrapper">
+          <h2 class="reviews__tittle">Живой пример</h2>
+          <div class="reviews__description">
+            <p class="reviews__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="reviews__stats">
+              <ul class="reviews__stats-list">
+                <li class="reviews__stats-item">
+                  <p class="reviews__value">5 кг</p>
+                  <p class="reviews__note">снижение веса</p>
+                </li>
+                <li class="reviews__stats-item">
+                  <p class="reviews__value">60 дней</p>
+                  <p class="reviews__note">затрачено времени</p>
+                </li>
+              </ul>
+              <p class="reviews__price">
+                <span class="reviews__price-text">Затраты на питание: </span>
+                <span class="reviews__price-value">15 000 руб.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="reviews__picture-compare compare">
+            <div class="compare__pictures">
+              <div class="compare__picture compare__picture--before compare__picture--active">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/before@1x.webp 1x, img/before@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/before@1x.png 1x, img/before@2x.png 2x">
+                  <img class="compare__img" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Фотография кота до приема корма">
+                </picture>
+              </div>
+              <div class="compare__picture compare__picture--after">
+                <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/after@1x.webp 1x, img/after@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/after@1x.png 1x, img/after@2x.png 2x">
+                  <img class="compare__img" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фотография кота после приема корма">
+                </picture>
+              </div>
+            </div>
+            <div class="compare__control">
+              <button class="compare__btn compare__btn--before">Было</button>
+              <div class="compare__bar">
+                <button class="compare__toggle compare__toggle--before" type="button" aria-label="Ползунок сравнения"></button>
+              </div>
+              <button class="compare__btn compare__btn--after">Стало</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!--
       <section class="map">
         <h2 class="visually-hidden">Наши координаты</h2>
@@ -106,8 +159,29 @@
       </section>-->
     </main>
 
-    <!--
-    <footer class="main-footer main-footer--main-page">
+    <footer class="main-footer">
+      <section class="main-footer__contacts contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__container">
+            <div class="contacts__info">
+              <b class="contacts__tittle">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+              <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
+            </div>
+          </div>
+        </div>
+
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="contacts__map-picture" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@1x.png 2x" alt="Наши координаты">
+        </picture>
+        <div class="contacts__map map" id="YMapsID"></div>
+      </section>
+      <!--
       <div class="main-footer__logo">
         <svg class="main-footer__logo-img" width="147" height="40" version="1.1"  x="0px" y="0px" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
           <use xlink:href="#sprite-footer-logo"></use>
@@ -125,8 +199,9 @@
             <use xlink:href="#sprite-logo-htmlacademy"></use>
           </svg>
         </a>
-      </div>
-    </footer>-->
+      </div>-->
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
