@@ -41,11 +41,10 @@
     <main class="page-main">
       <section class="questionnaire">
         <h1 class="questionnaire__tittle">Подбор программы</h1>
+        <div class="questionnaire__description">
+          <p class="questionnaire__description-text">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
+        </div>
         <form class="questionnaire__form" action="https://echo.htmlacademy.ru" method="post">
-          <div class="questionnaire__description">
-            <p class="questionnaire__description-text">Заполните анкету и мы подберем<br>программу питания для вашего кота</p>
-          </div>
-
           <div class="questionnaire__item questionnaire__item--cat-info">
             <h2 class="visually-hidden">Данные о коте</h2>
             <div class="questionnaire__group questionnaire__group--cat-info">
@@ -81,20 +80,22 @@
           </div>
 
           <div class="questionnaire__item questionnaire__item--contacts">
-            <h2 class="questionnaire__item-tittle questionnaire__item-tittle--contacts">Контактные данные<br> (владельца кота)</h2>
-            <div class="questionnaire__group questionnaire__group--contact questionnaire__group--mail">
-              <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">E-mail:*</label>
-              <input class="questionnaire__field" type="email" name="email" id="mail" placeholder="kuklachev@gmail.com">
-              <svg class="questionnaire__field-icon questionnaire__field-icon--mail" width="17" height="13">
-                <use xlink:href="#sprite-icon-mail"></use>
-              </svg>
-            </div>
-            <div class="questionnaire__group questionnaire__group--contact questionnaire__group--phone">
-              <label class="questionnaire__text-label questionnaire__text-label--contact" for="tel"> Телефон:*</label>
-              <input class="questionnaire__field" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
-              <svg class="questionnaire__field-icon questionnaire__field-icon--phone" width="20" height="20">
-                <use xlink:href="#sprite-icon-phone"></use>
-              </svg>
+            <h2 class="questionnaire__item-tittle questionnaire__item-tittle--contacts">Контактные данные (владельца кота)</h2>
+            <div class="questionnaire__container">
+              <div class="questionnaire__group questionnaire__group--contact questionnaire__group--mail">
+                <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">E-mail:*</label>
+                <input class="questionnaire__field" type="email" name="email" id="mail" placeholder="kuklachev@gmail.com">
+                <svg class="questionnaire__field-icon questionnaire__field-icon--mail" width="17" height="13">
+                  <use xlink:href="#sprite-icon-mail"></use>
+                </svg>
+              </div>
+              <div class="questionnaire__group questionnaire__group--contact questionnaire__group--phone">
+                <label class="questionnaire__text-label questionnaire__text-label--contact" for="tel"> Телефон:*</label>
+                <input class="questionnaire__field" type="tel" name="tel" id="tel" placeholder="8 (960) 900-60-90">
+                <svg class="questionnaire__field-icon questionnaire__field-icon--phone" width="20" height="20">
+                  <use xlink:href="#sprite-icon-phone"></use>
+                </svg>
+              </div>
             </div>
           </div>
 
