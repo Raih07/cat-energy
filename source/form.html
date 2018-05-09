@@ -9,6 +9,10 @@
     <link rel="preload" href="fonts/arialmt.woff2" as="font">
     <link rel="preload" href="css/style.min.css" as="style">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none">
@@ -80,7 +84,7 @@
           </div>
 
           <div class="questionnaire__item questionnaire__item--contacts">
-            <h2 class="questionnaire__item-tittle questionnaire__item-tittle--contacts">Контактные данные (владельца кота)</h2>
+            <h2 class="titte-line questionnaire__item-tittle questionnaire__item-tittle--contacts">Контактные данные (владельца кота)</h2>
             <div class="questionnaire__container">
               <div class="questionnaire__group questionnaire__group--contact questionnaire__group--mail">
                 <label class="questionnaire__text-label questionnaire__text-label--contact" for="mail">E-mail:*</label>
@@ -100,14 +104,14 @@
           </div>
 
           <div class="questionnaire__item questionnaire__item--comments">
-            <h2 class="questionnaire__item-tittle questionnaire__item-tittle--comments">Комментарий</h2>
+            <h2 class="titte-line questionnaire__item-tittle questionnaire__item-tittle--comments">Комментарий</h2>
             <div class="questionnaire__group">
               <textarea class="questionnaire__area" name="comments" id="comments" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
           </div>
 
           <div class="questionnaire__item questionnaire__item--additionally">
-            <h2 class="questionnaire__item-tittle questionnaire__item-tittle--additionally">Дополнительно</h2>
+            <h2 class="titte-line questionnaire__item-tittle questionnaire__item-tittle--additionally">Дополнительно</h2>
             <ul class="questionnaire__list">
               <li class="questionnaire__option">
                 <input class="questionnaire-input questionnaire-input--checkbox visually-hidden" id="sweetener" name="additionally" value="sweetener" type="checkbox" checked>

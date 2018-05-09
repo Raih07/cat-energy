@@ -124,11 +124,20 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   @media (min-width: @width-tablets) {
     font-size: 20px;
     padding-bottom: 6px;
     border-bottom: 1px dotted #bebebe;
+
+    &:hover {
+      border-bottom: 1px solid #989898;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
   }
 }
 
@@ -190,6 +199,7 @@
     border-radius: 50%;
     background-color: @white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    outline: none;
 
     &::after {
       content: "";
@@ -201,6 +211,15 @@
       border-radius: 50%;
       background-color: @green;
       transform: translate(-50%, -50%);
+    }
+
+    &:hover:not(:focus) {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.35);
+    }
+
+    &:focus {
+      border: 2px solid @green;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.35);
     }
   }
 }
