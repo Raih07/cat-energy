@@ -84,7 +84,152 @@ if(document.getElementById('YMapsID')) {
   }
 }
 
+/*******Слайдер сравнения кошек*******/
 
+var SLIDE_EVENT = 'slide';
+var WIDTH_BEFORE = 0;
+var WIDTH_AFTER = 100;
+
+var sliderElement = document.querySelector('.compare__bar');
+var pictureBeforeElement = document.querySelector('.compare__picture--before');
+var buttonBefore = document.querySelector('.compare__btn--before');
+var buttonAfter = document.querySelector('.compare__btn--after');
+
+if (sliderElement) {
+  var sliderCompare = new Slider({
+    elem: sliderElement,
+    max: 100
+  });
+
+  document.addEventListener(SLIDE_EVENT, function(evt) {
+    pictureBeforeElement.style.width = 100 - evt.detail.pos + '%';
+    //console.log(evt.detail.pos);
+  });
+
+  buttonBefore.addEventListener('click', function () {
+    sliderCompare.setValue(WIDTH_BEFORE);
+  });
+
+  buttonAfter.addEventListener('click', function () {
+    sliderCompare.setValue(WIDTH_AFTER);
+  });
+
+  //полифилл для включения CustomEvent в IE9+
+  try {
+    new CustomEvent("IE has CustomEvent, but doesn't support constructor");
+  } catch (e) {
+    window.CustomEvent = function (event, params) {
+      var evt;
+      params = params || {
+        bubbles: false,
+        cancelable: false,
+        detail: undefined
+      };
+      evt = document.createEvent("CustomEvent");
+      evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
+      return evt;
+    };
+    CustomEvent.prototype = Object.create(window.Event.prototype);
+  }
+
+  function Slider(options) {
+    var elem = options.elem;
+    var thumbElem = elem.querySelector('.compare__toggle');
+
+    var max = options.max || 100;
+    var sliderCoords, thumbCoords, shiftX, pixelsPerValue;
+
+    pixelsPerValue = (elem.offsetWidth - thumbElem.offsetWidth) / max;
+
+    elem.ondragstart = function() {
+      return false;
+    };
+
+    elem.ontouchstart = elem.onmousedown = function(event) {
+      //console.log(event.target.className);
+      if (event.target.classList.contains('compare__toggle')) {
+        var clientX = event.clientX || event.touches[0].clientX;
+        var clientY = event.clientY || event.touches[0].clientY;
+
+        //console.log('pixelsPerValue ' + pixelsPerValue);
+        startDrag(clientX, clientY);
+        return false;
+      }
+    }
+
+    function startDrag(startClientX, startClientY) {
+      thumbCoords = thumbElem.getBoundingClientRect();
+      sliderCoords = elem.getBoundingClientRect();
+
+      shiftX = startClientX - thumbCoords.left;
+
+      document.addEventListener('mousemove', onDocumentMouseMove);
+      document.addEventListener('mouseup', onDocumentMouseUp);
+
+      document.addEventListener('touchmove', onDocumentMouseMove);
+      document.addEventListener('touchend', onDocumentMouseUp);
+    }
+
+    function moveTo(clientX) {
+      var newLeft = clientX - shiftX - sliderCoords.left;
+
+      if (newLeft < 0) {
+        newLeft = 0;
+      }
+
+      var rightEdge = elem.offsetWidth - thumbElem.offsetWidth;
+      if (newLeft > rightEdge) {
+        newLeft = rightEdge;
+      }
+
+      thumbElem.style.left = newLeft + 'px';  //версия в пикселях
+      //thumbElem.style.left = (newLeft / elem.offsetWidth) * 100 + '%';  //версия в процентах
+      setEvent(SLIDE_EVENT, newLeft);
+    }
+
+    function setEvent(events, data) {
+      elem.dispatchEvent(new CustomEvent(events, {
+        bubbles: true,
+        detail: { pos: positionToValue(data), filt_type: events }
+      }));
+    }
+
+    function positionToValue(left) {
+      return Math.round(left / pixelsPerValue);
+    }
+
+    function valueToPosition(value) {
+      return pixelsPerValue * value;
+    }
+
+    function onDocumentMouseMove(e) {
+      var clientX = e.clientX || e.touches[0].clientX;
+      moveTo(clientX);
+    }
+
+    function onDocumentMouseUp() {
+      endDrag();
+    }
+
+    function endDrag() {
+      document.removeEventListener('mousemove', onDocumentMouseMove);
+      document.removeEventListener('mouseup', onDocumentMouseUp);
+
+      document.removeEventListener('touchmove', onDocumentMouseMove);
+      document.removeEventListener('touchend', onDocumentMouseUp);
+    }
+
+    function setValue(value) {
+      var pos = valueToPosition(value);
+      console.log(value + ', ' + pos);
+      thumbElem.style.left = pos + 'px';  //версия в пикселях
+      //thumbElem.style.left = (pos / elem.offsetWidth) * 100 + '%';  //версия в процентах
+      setEvent(SLIDE_EVENT, pos);
+    }
+
+    this.setValue = setValue;
+  }
+}
 
 /*******Открытии и закрытие попапов*******/
 

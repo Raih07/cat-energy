@@ -40,11 +40,13 @@
 }
 
 .compare__pictures {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   margin-bottom: 32px;
 
   @media (min-width: @width-tablets) {
+    position: static;
     width: auto;
     margin-bottom: 19px;
   }
@@ -55,13 +57,31 @@
 }
 
 .compare__picture {
+  &--before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: @gray;
+    z-index: 2;
+    transition: all 0.2s ease;
+    overflow: hidden;
+  }
+
+  &--after {
+    position: relative;
+    z-index: 1;
+    background-color: @gray;
+  }
+  /*
   @media (max-width: (@width-tablets - 1px)) {
     display: none;
 
     &--active {
       display: block;
     }
-  }
+  }*/
 
   @media (min-width: @width-tablets) {
     &--before {
@@ -71,6 +91,7 @@
       left: 0;
       width: 50%;
       background-image: linear-gradient(to bottom, #ffffff 169px, #f2f2f2 169px, #f2f2f2 100%);
+      background-color: transparent;
       z-index: 2;
       transition: all 0.2s ease;
       overflow: hidden;
@@ -79,6 +100,7 @@
     &--after {
       position: relative;
       z-index: 1;
+      background-color: transparent;
     }
 
     @media (min-width: @width-desktop) {
@@ -92,7 +114,8 @@
 .compare__img {
   display: block;
   width: 320px;
-  height: auto;
+  max-width: 320px;
+  height: 240px;
 
   @media (min-width: @width-tablets) {
     width: 690px;
@@ -151,6 +174,7 @@
   border: 1px solid @gray-middle2;
   background-color: @white;
   border-radius: 6px;
+  pointer-events: none;
 
   @media (min-width: @width-tablets) {
     padding: 0;
@@ -164,8 +188,9 @@
 }
 
 .compare__toggle {
-  //position: absolute;
-  //top: 3px;
+  position: absolute;
+  top: 3px;
+  left: 5px;
   display: block;
   width: 35px;
   height: 6px;
@@ -174,7 +199,9 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  pointer-events: auto;
 
+  /*
   @media (max-width: (@width-tablets - 1px)) {
     &--before {
       //left: 5px;
@@ -185,7 +212,7 @@
       //right: 5px;
       transform: translateX(100%);
     }
-  }
+  }*/
 
   @media (min-width: @width-tablets) {
     position: absolute;
